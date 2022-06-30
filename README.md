@@ -25,7 +25,7 @@ In this lab we will be working on two code Bases, **Backend Code base** and **Fr
 ### Previously 
 We developed a base structure of an API solution in Asp.net core that have just two api functions `GetLast12MonthBalances` and `GetLast12MonthBalances/{userId}` which returns data of the last 12 months total balances in a `TransactionController`.
 
-![](/12m.jpg)
+![](Readme-images/12m.jpg)
 
 
 There are 4 Projects in the solution. 
@@ -38,7 +38,7 @@ There are 4 Projects in the solution.
 
 * **BBBankAPI**: This project **contains TransactionController** with 2 GET methods `GetLast12MonthBalances` & `GetLast12MonthBalances/{userId}` to call the TransactionService.
 
-![](/4.png)
+![](Readme-images/4.png)
 
 For more details about this base project See: https://github.com/PatternsTechGit/PT_ServiceOrientedArchitecture
 
@@ -52,7 +52,7 @@ We scaffolded a new Angular application in which we have integrated
 * **Bootstrap library** for styling.
 * **Bootstrap toolbar**
 
-![](/navBar-desktop.png)
+![](Readme-images/navBar-desktop.png)
 
 _____________
 
@@ -308,12 +308,12 @@ Add ***FormsModule*** in the ***imports*** array of `app.module.ts` for template
   ],
 ```
 
-![](/ui.png)
+![](Readme-images/ui.png)
 
 -----------
 ### **Final output will look like this**
 When the account number already exists the custom validation  directive returns the error message and the form will looks like this  
-![](/customValidation.png)
+![](Readme-images/customValidation.png)
 
 
 
