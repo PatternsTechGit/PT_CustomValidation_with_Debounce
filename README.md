@@ -58,13 +58,13 @@ _____________
 
 ## **In this exercise**
 
-  **Backend Code**
+**Backend Code**
 * We will **create an account service**  and a contract for this service in the **Service** project 
 * We will **register this service in a pipeline** as scoped 
 * We will **create an account controller**  with method **AccountNumberExists(string accountNumber)**
 * We will **add some fake accounts** 
 
-  **Frontend Code**
+**Frontend Code**
 * We will **create an account service** 
 * We will **create custom account number validator directive**  
 * We will **add a template driven form** in the HTML file of appComponent 
