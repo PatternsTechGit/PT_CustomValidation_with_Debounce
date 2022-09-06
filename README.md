@@ -116,7 +116,7 @@ builder.Services.AddScoped<IAccountService, AccountService>();
 ```
 
  ### **Step 3: Create a Controller**
- Create a new API controller in our startup project and name it `AccountController`. Als, create its constructor in which we will inject ***IAccountService***. Now, create a method `AccountNumberExists(string accountNumber)` which will call the service method to check whether the account number exists or not and return the response as an ***OkObjectResult***. The code is given below
+ Create a new API controller in our startup project and name it `AccountController`. Also, create its constructor in which we will inject ***IAccountService***. Now, create a method `AccountNumberExists(string accountNumber)` which will call the service method to check whether the account number exists or not and return the response as an ***OkObjectResult***. The code is given below
 
  ```cs
     [Route("api/[controller]")]
@@ -147,7 +147,7 @@ builder.Services.AddScoped<IAccountService, AccountService>();
 We have also **defined attribute routing** for our controller and method. And, **used try catch blocks** to handle exceptions 
 
  ### **Step 4: Add Fake Accounts**
-We will **add some fake accounts** in the context file so that we can test test our validator. Add the following code in the 'BBBankContext.cs' file 
+We will **add some fake accounts** in the context file so that we can test our validator. Add the following code in the 'BBBankContext.cs' file after initializing `this.Accounts` *list*
 
 ```cs
  // initializing 24 new fake accounts.
@@ -169,9 +169,9 @@ Follow the below steps to implement frontend code for custom validation with deb
 Run the following command in the terminal to create a service  
 
 ```bash
-ng generate service service/account
+ng generate service account
 ```
-Now, We will ***inject HttpClient in the constructor*** to make a HTTP request. Create a function **AccountNumberExists(accountNumber: string)** which takes the account number as a paramter and will return the observable of type boolean as a response. The code is given below
+Now, We will ***inject HttpClient in the constructor*** to make a HTTP request. Create a function **AccountNumberExists(accountNumber: string)** which takes the account number as a parameter and will return the observable of type boolean as a response. The code is given below
 
 ```cs
 import { HttpClient } from '@angular/common/http';
@@ -312,8 +312,8 @@ Add ***FormsModule*** in the ***imports*** array of `app.module.ts` for template
 
 -----------
 ### **Final output will look like this**
-When the account number already exists the custom validation  directive returns the error message and the form will looks like this  
-![](Readme-images/customValidation.png)
+Enter any of the fake account between *1-xxx-xxx* and *24-xxx-xxx* or already existing account *0001-1001* and you will notice the warning that account number already exists. The form will looks like this  
+>![](Readme-images/customValidation.png)
 
 
 
